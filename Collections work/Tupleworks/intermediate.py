@@ -56,9 +56,21 @@ print(tup[-3:-1])
 
 # Nest one tuple inside another
 
+tp1=(1,2,3,4)
 
+tp2=("car","bike",tp1)
+
+print(tp2)
 
 # Use tuple as a key in a dictionary
+
+tp1=(1,2,3,4)
+
+dict={}
+
+dict[tp1]="value"
+
+print(dict)
 
 # Check if all items in a tuple are the same
 

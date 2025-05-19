@@ -19,6 +19,7 @@ print(sec_largest)
 sec_smallest=unique_lst[-2]
 print(sec_smallest)
 # Remove duplicates from a list
+
 print(unique_lst)
 #or
 lst=[64, 3, 12, 50, 2, 2, 11]
@@ -177,8 +178,11 @@ print(flat)
 # Split a list into sublists of equal size (e.g., chunks of 3)
 
 lst=[1, 2, 3, 4, 5, 6]
+
 chunks=[]
+
 for i in range(0,len(lst),3):
+    
     chunks.append(lst[i:i+3])
 
 print(chunks)
