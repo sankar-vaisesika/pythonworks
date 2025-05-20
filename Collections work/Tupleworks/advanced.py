@@ -95,4 +95,18 @@ print(unique_elements)
 
 # Count total characters in a tuple of strings
 
+tp=(2,'c','r','q', 1, 4, 1, 5)
+num=0
+for i in tp:
+
+    if isinstance(i,str):
+
+        num+=1
+
+print(num)
+
 # Tuple comprehension using generator expressions
+
+squares=tuple(x**2 for x in range(1,6))
+
+print(squares)

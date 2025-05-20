@@ -7,6 +7,7 @@ print(employee)
 print(employee["name"])
 
 # Add a new key-value pair to a dictionary
+
 employee['age']=23
 
 print(employee)
