@@ -4,6 +4,10 @@ lst=[1,2,64,23,12,2,1]
 
 print(lst)
 
+# How can you find the index of the last occurrence of a specific element in a list?
+
+print(lst.rindex(2))
+
 #find the length of the list
 
 print(len(lst))
