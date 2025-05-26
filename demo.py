@@ -69,20 +69,10 @@ while len(lst)<n:
 print(lst)
 #_________________________________
 
-lst=[1,2,2,3,1,4,1,2,4,3,1,5,2]
+def myFun(a,b,operator):
 
-dict={}
+    if operator=='+':
 
-for item in lst:
-    if item in dict:
-        dict[item]+=1
-
-    else:
-
-        dict[item]=1    
-
-print(dict)
-
-max_item=max(dict,key=dict.get)
-
-print(max_item)
+        return a+b
+    
+print(myFun(2,4,'+'))
