@@ -90,64 +90,51 @@ def myFun(a,b,operator):
     
 print(myFun(2,4,'+'))
 
-class Person:
 
-    def __init__(self,name,age):
-        
-        self.name=name
-        self.age=age
+#_________________________________
 
-    def greet(self):
+n = lambda x:"Divisible by 3" if x%3==0 else "Divisible by 5" if x%5==0 else "Not divisible by 3 or 5"
 
-        return "hai"
+print(n(5))
 
-class Employee(Person):
+#________________________________
 
-    def __init__(self, role, salary):
+# x=-1
 
-        self.role=role
 
-        self.salary=salary
+# if type(x) is int:
 
+#     raise TypeError("string is only allowed")
+
+#________________________________________
+
+class Above_age(Exception):
+
+    pass
     
+y=26
 
-    def greet(self):
+try:
+    if y>18:
+        raise Above_age("Above 18years old")
 
-        return "hello"
+except Above_age as e:
 
-employee_instance=Employee('hr',21000)     
+    print("find exception",e)
 
-print(employee_instance.greet())
+#___________________________________________
 
+class ShortPasswordError(Exception):
+    pass
 
+password = "sdwd"
 
-# person_instance=Person("ajay",21)
+try:
+    if len(password) < 6:
+        raise ShortPasswordError("password must be at least 6 characters long")
+    else:
+        print("password accepted")
+except ShortPasswordError as e:
+    print("Error:", e)
 
-# person_2=Person("Mani",23)
-# print(person_2.age)
-# print(person_instance.name)
-
-#Class is able to store memory whereas function can't
-class Employee:
-    def __init__(self,role):
-
-        self.role=role
-        
-class Person:
-
-    def __init__(self,name,age):
-
-        self.name=name
-
-        self.age=age
-
-class Student(Person,Employee):
-
-    def __init__(self, name, age,role,id):
-        super().__init__(name, age,role)
-        
-        self.id=id
-
-s=Student("mani",21,112,"hr")
-
-print(s.role)
+#__________________________________________
