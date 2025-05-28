@@ -138,3 +138,13 @@ except ShortPasswordError as e:
     print("Error:", e)
 
 #__________________________________________
+
+d={1:2,3:4,5:6}
+
+if 4 in d:
+
+    print(True)
+
+else:
+
+    print(False)
