@@ -1,8 +1,15 @@
+# def palindrome(x):
+
+#     # x=str(x)
+#     # return x[::]==x[::-1]
+
+
+# print(palindrome(121))
+
+
+
 def palindrome(x):
 
-    # x=str(x)
-    # return x[::]==x[::-1]
+    return str(x)==" ".join(reversed(x))
 
-    return  str(x)=="".join(reversed(str(x))) 
-
-print(palindrome(121))
+print(palindrome("asa"))

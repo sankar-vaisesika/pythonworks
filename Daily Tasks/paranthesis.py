@@ -1,36 +1,69 @@
-def paranthesis(s):
+# def paranthesis(s):
 
-    stack=[]
+#     stack=[]
 
-    mapping={
-        ']':'[',
-        '}':'{',
-        ')':'('
-    }
+#     mapping={
+#         ']':'[',
+#         '}':'{',
+#         ')':'('
+#     }
 
-    for c in s:
+#     for c in s:
 
-        if c in mapping:
+#         if c in mapping:
 
-            if stack and stack[-1]==mapping[c]:
+#             if stack and stack[-1]==mapping[c]:
 
-                stack.pop()
+#                 stack.pop()
 
-            else:
+#             else:
 
-                False
+#                 False
             
-        else:
+#         else:
 
-            stack.append(c)
+#             stack.append(c)
 
-    return not stack
+#     return not stack
 
         
 
 
+# print(paranthesis('{[]}'))
+
+# print(paranthesis('()[]{}'))
+
+# print(paranthesis('([)'))
+
+
+def paranthesis(s):
+
+        mapping={
+        ']':'[',
+        '}':'{',
+        ')':'('
+    }
+        
+        stack=[]
+
+        for c in s:
+                
+            if c in mapping:
+                  
+                  if stack and stack[-1]==mapping[c]:
+                        
+                        stack.pop()
+
+                  else:
+                        
+                        False
+            else:
+                  stack.append(c)
+        
+        return not stack
+
 print(paranthesis('{[]}'))
 
 print(paranthesis('()[]{}'))
-print(paranthesis('([)'))
 
+print(paranthesis('([)'))
