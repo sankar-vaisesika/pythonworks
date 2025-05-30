@@ -6,37 +6,61 @@ print(sum(lst))
 # Find the largest and smallest elements
 
 max_num=max(lst)
+
 print(max_num)
 
 min_num=min(lst)
+
 print(min_num)
+
 # Find the second largest and second smallest
+
 unique_lst=list(set(lst))
+
 unique_lst.sort(reverse=True)
+
 sec_largest=unique_lst[1]
+
 print(sec_largest)
 
 sec_smallest=unique_lst[-2]
+
 print(sec_smallest)
+
 # Remove duplicates from a list
 
 print(unique_lst)
+
 #or
+
 lst=[64, 3, 12, 50, 2, 2, 11]
 
 unique_lst=[]
+
 for num in lst:
+
     if num not in unique_lst:
+
         unique_lst.append(num)
+
 print(unique_lst)
+
 #or
+
 lst=[64, 3, 12, 50, 2, 2,3,12, 11]
+
 unique_lst=list(dict.fromkeys(lst))
+
 r=print(unique_lst)
+
 # Print even and odd numbers separately
+
 lst=[64, 3, 12, 50, 2, 2,3,12, 11]
+
 odd_numbers=[]
+
 even_numbers=[]
+
 for num in lst:
 
     if num%2!=0:
@@ -44,27 +68,35 @@ for num in lst:
 
     else:
         even_numbers.append(num)
+
 print("odd numbers:",odd_numbers,"Even numbers:",even_numbers)
 
 # Separate positive and negative numbers
+
 lst=[1,3,-2,1,-4,-6,3]
+
 pos_numbers=[]
+
 neg_numbers=[]
+
 for num in lst:
+
     if num>0:
+
         pos_numbers.append(num)
 
     else:
+
         neg_numbers.append(num)
 
 print(f"Positive numbers:{pos_numbers},Negative numbers:{neg_numbers}")
 
-
-
 # Swap first and last elements in a list
 
 lst=[1,3,-2,1,-4,-6,3]
+
 lst[0],lst[-1]=lst[-1],lst[0]
+
 print(lst)
 
 # Shift elements circularly to the right by 1
@@ -86,8 +118,11 @@ else:
     print("list is not a palindrome")
 
 # Create a list of squares from another list
+
 lst=[1,2,3,4,5]
+
 squares=[num**2 for num in lst]
+
 print(squares)
 
 # Merge two sorted lists into one sorted list
@@ -122,8 +157,8 @@ def merge_sorted_list(a,b):
 
             j+=1
 
-    result.extend(a[i:])
-    result.extend(b[j:])
+    # result.extend(a[i:])
+    # result.extend(b[j:])
 
     return result    
 

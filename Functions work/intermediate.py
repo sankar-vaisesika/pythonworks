@@ -4,20 +4,50 @@
 
 # Sum of digits of a number
 
-num=190
-sum=0
-num=str(num)
-for ch in num:
+def sum_of_numbers(n):
 
-    sum=sum+int(ch)
+    result=0
 
-print(sum)
+    while n!=0:
+
+        digit=n%10
+        result+=digit
+        n=n//10
+
+    print(result)
+
+sum_of_numbers(190)
 
 # Reverse a string without using slicing
 
+def reverse_a_string(s):
+
+    return "".join(reversed(s))
+
+print(reverse_a_string("domino"))
+    
+
 # Check if two strings are anagrams
 
+def are_anagrams(a,b):
+
+    a=a.replace(" ","").lower()
+    b=b.replace(" ","").lower()
+
+    return sorted(a) == sorted(b)
+
+print(are_anagrams("listen", "silent"))   
+print(are_anagrams("hello", "world"))  
+
 # Find the largest element in a list
+
+def largest_in_lst(a):
+
+    maxi=max(a)
+
+    return maxi
+
+print(largest_in_lst([3,1,5,7,4]))
 
 # Create a function that accepts variable number of arguments using *args
 

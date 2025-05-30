@@ -139,8 +139,12 @@ except ShortPasswordError as e:
 
 #__________________________________________
 
-from collections import Counter
 
-c=Counter("banana")
 
-print(c)
+
+
+lst=[2,1,3,4,2]
+
+if 2 in lst:
+
+    print("yes")

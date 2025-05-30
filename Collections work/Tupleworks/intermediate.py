@@ -66,11 +66,11 @@ print(tp2)
 
 tp1=(1,2,3,4)
 
-dict={}
+d={}
 
-dict[tp1]="value"
+d[tp1]="value"
 
-print(dict)
+print(d)
 
 # Check if all items in a tuple are the same
 
@@ -83,4 +83,4 @@ if len(set(tup))==1:
 
 else:
 
-    print("Not same")
+    print("yes")

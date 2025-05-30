@@ -6,7 +6,7 @@ print(lst)
 
 # How can you find the index of the last occurrence of a specific element in a list?
 
-print(lst.rindex(2))
+
 
 #find the length of the list
 
