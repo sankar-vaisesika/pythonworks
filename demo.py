@@ -1,34 +1,3 @@
-import copy
-
-original=[[1,2],[3,4]]
-
-shallow=copy.copy(original)
-
-shallow[0][0]=99
-
-print(original)
-
-#or
-
-lst1=[[1,2],[3,4]]
-
-lst2=lst1.copy()
-
-lst2[0][0]=99
-
-print(lst1)
-
-
-#_______________________________________
-
-
-original=[[1,2],[3,4]]
-
-deep=copy.deepcopy(original)
-
-deep[0][0]=99
-
-print(original)
 
 
 #________________________________________
@@ -108,43 +77,19 @@ print(n(5))
 
 #________________________________________
 
-class Above_age(Exception):
+def outer_function():
 
-    pass
-    
-y=26
+    message="hei"
 
-try:
-    if y>18:
-        raise Above_age("Above 18years old")
+    class LocalClass:
 
-except Above_age as e:
+        def show(self):
 
-    print("find exception",e)
+            print(message)
 
-#___________________________________________
+    obj=LocalClass()
 
-class ShortPasswordError(Exception):
-    pass
+    obj.show()
 
-password = "sdwd"
+outer_function()
 
-try:
-    if len(password) < 6:
-        raise ShortPasswordError("password must be at least 6 characters long")
-    else:
-        print("password accepted")
-except ShortPasswordError as e:
-    print("Error:", e)
-
-#__________________________________________
-
-
-
-
-
-lst=[2,1,3,4,2]
-
-if 2 in lst:
-
-    print("yes")

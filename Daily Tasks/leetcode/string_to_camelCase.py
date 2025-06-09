@@ -1,0 +1,26 @@
+# def to_camel_case(text):
+#     if not text:
+
+#         return ""
+    
+#     words=text.replace('-','_').split('_')
+
+#     return words[0]+"".join(word.capitalize() for word in words[1:])
+
+# print(to_camel_case("the-stealth-warrior"))      
+# print(to_camel_case("The_Stealth_Warrior"))      
+# print(to_camel_case("The_Stealth-Warrior"))
+
+def to_camel_case(text):
+
+    words=text.replace('-','').replace('_','').split()
+
+    if len(words)==0:
+
+        return ''
+    
+    return words[0]+''.join(word.capitalize() for word in words[1:])
+
+print(to_camel_case("the-stealth-warrior"))      
+print(to_camel_case("The_Stealth_Warrior"))      
+print(to_camel_case("The_Stealth-Warrior"))
