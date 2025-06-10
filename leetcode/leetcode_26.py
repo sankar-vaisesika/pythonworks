@@ -2,7 +2,7 @@
 
 def remove_duplicates(nums):
 
-    l=1
+    l=0
 
     for r in range(1,len(nums)):
 
