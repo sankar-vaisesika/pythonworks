@@ -58,6 +58,7 @@ except KeyError as e:
 #AttributeError
 
 try:
+
     x=10
 
     print(x.append(10))
@@ -116,3 +117,37 @@ try:
 except MemoryError as e:
 
     print("Error:",e)
+
+
+#_________________________________________
+
+class Above_age(Exception):
+
+    pass
+    
+y=26
+
+try:
+    if y>18:
+        raise Above_age("Above 18years old")
+
+except Above_age as e:
+
+    print("find exception",e)
+
+#___________________________________________
+
+class ShortPasswordError(Exception):
+    pass
+
+password = "sdwd"
+
+try:
+    if len(password) < 6:
+        raise ShortPasswordError("password must be at least 6 characters long")
+    else:
+        print("password accepted")
+except ShortPasswordError as e:
+    print("Error:", e)
+
+#__________________________________________

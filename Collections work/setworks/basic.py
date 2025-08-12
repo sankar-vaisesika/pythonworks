@@ -1,18 +1,31 @@
 # Create a set and print all elements
-st1={1,2,3,4}
+
+st1={1,2,3,4}   
+
 print(st1)
+
 # Add a single element using add()
+
 st1.add(10)
+
 print(st1)
+
 # Add multiple elements using update()
+
 st2={'q','w','e','r','t','y'}
+
 st1.update(st2)
+
 print(st1)
+
 #or
 
 numbers={1,2,3,4}
+
 numbers.update([5,6,71,23])
+
 print(numbers)
+
 # Remove an element using remove()
 st1.remove('q')
 

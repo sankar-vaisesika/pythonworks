@@ -34,16 +34,25 @@ print(frequency)
 d = {'b': 2, 'a': 1, 'c': 3}
 
 sorted_by_keys=dict(sorted(d.items()))
+
 print(sorted_by_keys)
-# Sort a dictionary by values
+
+# Sort a dictionary by 
+
 sorted_by_values=dict(sorted(d.items()))
+
 print(sorted_by_values)
+
 # Get the key with the maximum value
+
 d = {'a': 5, 'b': 9, 'c': 3}
+
 max_key = max(d, key=d.get)
+
 print(max_key)
 
 # Get the key with the minimum value
+
 d = {'a': 5, 'b': 9, 'c': 3}
 
 min_key=min(d,key=d.get)
@@ -63,11 +72,13 @@ for k,v in d.items():
 print(inverted)
 
 # Use dictionary comprehension to filter data
+
 d = {'a': 10, 'b': 5, 'c': 12}
 
 filtered={k:v for k,v in d.items() if v>6}
 
 print(filtered)
+
 # Use nested dictionaries (dictionary inside dictionary)
 
 

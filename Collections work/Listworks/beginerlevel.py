@@ -1,11 +1,8 @@
 # Create a list and print all elements
 
-lst=[1,2,64,23,12,2,1]
+lst=[1,2,64,23,12,2,1,3]
 
 print(lst)
-
-# How can you find the index of the last occurrence of a specific element in a list?
-
 
 
 #find the length of the list
@@ -74,3 +71,7 @@ str="Hai good morning How are you"
 str_lst=str.split(" ")
 
 print(str_lst)
+
+# How can you find the index of the last occurrence of a specific element in a list?
+
+print(len(lst)-1-lst[::-1].index(2))

@@ -1,8 +1,8 @@
+# Remove Duplicates from Sorted Array
 
+def removeDuplicates(nums):
 
-def remove_duplicates(nums):
-
-    l=0
+    l=1
 
     for r in range(1,len(nums)):
 
@@ -14,5 +14,5 @@ def remove_duplicates(nums):
 
     return l
 
-
-print(remove_duplicates([1,1,2]))
+print(removeDuplicates([1,1,2]))
+print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))

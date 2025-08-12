@@ -86,7 +86,6 @@ word_length={word:len(word) for word in sentence.split(" ")}
 
 print(word_length)
 
-# Flatten a nested dictionary (one level)
 
 
 # Store students’ marks in a nested dictionary and find average
@@ -104,3 +103,5 @@ for name,marks in students.items():
     average=total/count
 
     print(f"{name}'s average is {average:.2f}")
+
+# Flatten a nested dictionary (one level)

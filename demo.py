@@ -77,19 +77,17 @@ print(n(5))
 
 #________________________________________
 
-def outer_function():
 
-    message="hei"
 
-    class LocalClass:
+def linear_search(list,target):
 
-        def show(self):
+    for i in range(len(list)):
 
-            print(message)
+        if list[i]==target:
 
-    obj=LocalClass()
+            return "target found at i" 
 
-    obj.show()
+    return None
 
-outer_function()
 
+print(linear_search([1,2,5,4,7,1,2],4))

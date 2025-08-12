@@ -18,26 +18,6 @@
 
 
 
-# def twoSum(nums,target):
-
-#     num_dict={}
-
-#     for i,num in enumerate(nums):
-
-#         difference=target-num
-
-#         if difference in num_dict:
-
-#             return[num_dict[difference],i]
-        
-#         num_dict[num]=i
-
-#     return []
-
-# print(twoSum([2,7,11,15],9))
-# print(twoSum([3,2,4],6))
-# print(twoSum([3,3],6))
-
 def twoSum(nums,target):
 
     num_dict={}
@@ -48,11 +28,14 @@ def twoSum(nums,target):
 
         if difference in num_dict:
 
-            return [num_dict[difference],i]
+            return[num_dict[difference],i]
+        
         num_dict[num]=i
 
     return []
+
 print(twoSum([2,7,11,15],9))
 print(twoSum([3,2,4],6))
 print(twoSum([3,3],6))
+
 

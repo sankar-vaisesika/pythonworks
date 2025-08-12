@@ -26,10 +26,12 @@ def paranthesis(s):
 
     return not stack
 
+
+
         
 print(paranthesis('{[]}'))
 
-print(paranthesis('()[]{}'))
+print(paranthesis('()[]'))
 
 print(paranthesis('([)'))
 

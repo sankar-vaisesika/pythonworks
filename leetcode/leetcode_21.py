@@ -5,8 +5,9 @@ class Node:
 
 class LinkedList:
     def mergeTwoLists(self, l1, l2):
-        dummy = Node()
-        tail = dummy
+        dummy = Node()          #This is a temporary starter node to help us build the final list.
+
+        tail = dummy            #This is a pointer that always points to the last node in the merged list.
 
         while l1 and l2:
             if l1.data < l2.data:
@@ -22,7 +23,7 @@ class LinkedList:
         elif l2:
             tail.next = l2
 
-        return dummy  # skip dummy node and return merged head
+        return dummy.next  # skip dummy node and return merged head
 
 # Helper function to create a linked list from Python list
 def create_linked_list(lst):
@@ -49,3 +50,6 @@ l2 = create_linked_list([1, 2, 4])
 
 merged = LinkedList().mergeTwoLists(l1, l2)
 print_linked_list(merged)
+
+
+# explain about dummy:- https://stackoverflow.com/questions/58715870/explanation-about-dummy-nodes-and-pointers-in-linked-lists

@@ -58,8 +58,3 @@ print(dq)   #output:-deque([3, 1, 2, 3, 4])
 
 #__________________________________
 
-def greet(name:str):
-
-    print("Hello",name)
-
-greet("saji")

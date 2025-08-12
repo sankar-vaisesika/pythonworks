@@ -157,8 +157,8 @@ def merge_sorted_list(a,b):
 
             j+=1
 
-    # result.extend(a[i:])
-    # result.extend(b[j:])
+    result.extend(a[i:])
+    result.extend(b[j:])
 
     return result    
 
