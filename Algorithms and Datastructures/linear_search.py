@@ -12,5 +12,5 @@ def linear_search(lst,target):
     print("target was not found on the list")
 
 
-linear_search([1,2,4,21,12,4,6],11)
+linear_search([1,2,4,21,12,4,6],12)
 

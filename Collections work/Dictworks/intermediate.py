@@ -37,7 +37,7 @@ sorted_by_keys=dict(sorted(d.items()))
 
 print(sorted_by_keys)
 
-# Sort a dictionary by 
+# Sort a dictionary by values
 
 sorted_by_values=dict(sorted(d.items()))
 

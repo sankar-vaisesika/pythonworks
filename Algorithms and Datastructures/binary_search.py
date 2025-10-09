@@ -25,4 +25,4 @@ def binary_search(lst,target):
     print("not found")
     
 
-binary_search([1, 2, 4, 6, 12, 21, 21],4)
+binary_search([1, 2, 4, 6, 12, 21, 21],41)

@@ -60,4 +60,4 @@ else:
 
 lst=[1,2,3,23,213,123,123,123,2312]
 
-print(tuple(lst))
+print(set(lst))

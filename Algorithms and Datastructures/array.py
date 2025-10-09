@@ -1,5 +1,4 @@
 my_array = [7, 12, 9, 4, 11]
-
 minVal=my_array[0]
 
 for i in my_array:
@@ -10,3 +9,4 @@ for i in my_array:
 
 print('Lowest value:',minVal)
         
+

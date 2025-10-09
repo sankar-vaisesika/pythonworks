@@ -38,6 +38,20 @@ def fact(num):
 
 print(fact(5))
 
+#or
+def fact(n):
+
+    if n==0 or n==1:
+
+        return 1
+    
+    else:
+
+        return n*fact(n-1)
+
+
+print(fact(5))
+
 # Check if a number is prime
 
 def is_prime(num):

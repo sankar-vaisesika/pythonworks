@@ -1,6 +1,84 @@
 # Find the nth Fibonacci number
+def fibonacci(n):
 
+    if n<=0:
+
+        return "Invalid input"
+    
+    elif n==1:
+
+        return 0
+    
+    elif n==2:
+
+        return 1
+    
+    a,b=0,1
+
+    for i in range(2,n):
+
+        a,b=b,a+b
+
+    return b
+    
+print(fibonacci(5))
+#or
+
+def fibonacci(n):
+
+    if n<=0:
+
+        return "Invalid input"
+    
+    elif n==1:
+
+        return 0
+
+    elif n==2:
+
+        return 1
+
+    else:
+
+        return fibonacci(n-1)+fibonacci(n-2)
+
+print(fibonacci(5)) 
 # Check if a number is an Armstrong number
+
+# def is_armstrong(n):
+
+#     original_num=n
+
+#     digit_count=len(str(n))
+
+#     total=0
+
+#     while n!=0:
+
+#         digit=n%10
+
+#         exponent=digit**digit_count
+
+#         total+=exponent
+
+#         n=n//10
+
+#     return original_num==n
+
+# print(is_armstrong(153))
+
+def is_armstrong(n):
+
+    num_str=str(n)
+
+    digit_count=len(str(n))
+
+    total=sum(int(digit)**digit_count for digit in num_str)
+
+    return total==n
+
+print(is_armstrong(153))
+
 
 # Sum of digits of a number
 
