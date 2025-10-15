@@ -22,9 +22,3 @@ for r in result:
     print(r)
 
 
-
-
-# try exceptions
-# http responses
-# debugging using print statement
-# update contacts

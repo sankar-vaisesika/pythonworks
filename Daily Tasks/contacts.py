@@ -25,13 +25,14 @@ while True:
             contacts[name]=[phone]
 
         print("contact added successfully for",name)
+
     elif choice=="2":
 
         if contacts:
 
             for name,numbers in contacts.items():
 
-                print(f"{name}:{phone}")
+                print(f"{name}:{','.join(numbers)}")
 
         else:
 
@@ -53,4 +54,8 @@ while True:
 
         print("Invalid choice. ENter between 1-3")
 
-#name as key and number as list of values
+#updating this 
+
+#generators and decorators along with functions
+
+#orm

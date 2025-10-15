@@ -7,7 +7,7 @@ Y=0
 
 for i in range(len(X)):
     for j in range(len(X)):
-        if i==j:
+        if i==j:    #to get sum of other diagonel put if i!=j
 
             Y+=X[i][j]
 
