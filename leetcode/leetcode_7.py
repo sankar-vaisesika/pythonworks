@@ -26,3 +26,22 @@
 
 # print(reverse(-123))
 
+
+#another method
+def reverse(x):
+
+    t=str(x)
+
+    if x<0:
+
+        s=int(t[:0:-1])
+
+        s=s*-1
+
+    else:
+
+        s=int(t[::-1])
+
+    return s
+
+print(reverse(-123))
