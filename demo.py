@@ -1,5 +1,3 @@
-
-
 #sum of digits
 
 def sum_of_digits(n):
@@ -38,3 +36,8 @@ def count_digits(n):
 
 print(count_digits(1234))
 
+# Regular expression - rejects models
+# opening and writing reading a file - contence manager like file operations
+# django project 
+# ai-paper
+# ml-books
