@@ -6,7 +6,7 @@ def check_password(pwd):
         "lower":bool(re.search(r"[a-z]",pwd)),
         "upper":bool(re.search(r"[A-Z]",pwd)),
         "digit":bool(re.search(r"[0-9]",pwd)),
-        "special":bool(re.search(r"^[/w/s/d]",pwd)),
+        "special":bool(re.search(r"[^/w/s/d]",pwd)),
     }
 
     score=sum(checks.values())

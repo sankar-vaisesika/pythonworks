@@ -10,96 +10,135 @@
 #looping 
 #list
 #django project
+#Input marks for different subjects and calculate the total, average, and grade (A/B/C/D/F).
 
-#Longest Palindromic Substring
+# maths=int(input("Enter marks for maths:"))
+# english=int(input("Enter marks for english:"))
+# science=int(input("Enter marks for science:"))
+# social_science=int(input("Enter marks for social_science:"))
+# hindi=int(input("Enter marks for hindi:"))
 
-def longest_palindrome_substring(s):
-    best=s[0]
 
-    for i in range(len(s)):
 
-        for j in range(i+1,len(s)+1):
 
-            x=s[i:j]
+# total=maths+english+science+social_science+hindi
+# n=5
+# average=total/n
 
-            if x==x[::-1] and len(x)>len(best):
-                best=x
+# if average>=90:
+#     grade="A"
+# elif average>=75:
+#     grade="B"
+# elif average>=65:
+#     grade="C"
+# elif average>=55:
+#     grade="D"
+# elif average>=40:
+#     grade="E"
+# else:
+#     grade="F"
 
-    return best
+# print("Grade:",grade ,"\nAverage:",average,"\nTotal:",total)
 
-print(longest_palindrome_substring("babad"))
-print(longest_palindrome_substring("cbbd"))
-print(longest_palindrome_substring("c"))
 
-# Reverse Integer
 
-def rev_a_integer(num):
+def caluculate_grade(marks):
+    total=sum(marks.values())
+    n=len(marks)
+    avg=total/n 
 
-    return int(str(num)[::-1])
+    if avg >= 90:
+        grade = "A"
+    elif avg >= 80:
+        grade = "B"
+    elif avg >= 70:
+        grade = "C"
+    elif avg >= 60:
+        grade = "D"
+    else:
+        grade = "F"
 
-print(rev_a_integer(1234))
+    return total, avg, grade
 
-#regular expression matching
+subjects=["Maths","Physics","Chemistry","Biology","English"]
+marks={}
+for s in subjects:
+    marks[s]=int(input(f"Enter marks for {s}:"))
 
-import re
+total,avg,grade=caluculate_grade(marks)
+print(f"Total:{total}\nAverage:{avg}\nGrade:{grade}")
 
-pattern=input("Enter pattern:")
-text=input("ENter text:")
 
-match=re.search(pattern,text)
+# Unit converter
 
-if match:
-    print("Match found")
-    print("Matched text:", match.group())
+def metre_to_feet(m):
 
+    return m*3.28084
+
+def feet_to_metre(f):
+
+    return f/3.28084
+
+def kg_to_pounds(kg):
+    return kg*2.20462
+
+def pounds_to_kg(p):
+    return p/2.20462
+
+def hours_to_minutes(h):
+    return h*60
+
+def minutes_to_hours(m):
+    return m/60
+
+print("1) meters -> feet\n2) feet -> meters\n3) kg -> pounds\n4) pounds -> kg\n5) hours -> minutes\n6) minutes -> hours")
+choice=input("Choose 1-6:")
+val=float(input("Enter value:"))
+conversions = {
+    "1": metre_to_feet,
+    "2": feet_to_metre,
+    "3": kg_to_pounds,
+    "4": pounds_to_kg,
+    "5": hours_to_minutes,
+    "6": minutes_to_hours,
+}
+
+if choice in conversions:
+    print("Result:",conversions[choice])
 else:
+    print("Invalid choice")
 
-    print("Match  not found")
+#currency converter
 
+def usd_to_eur(usd):
+    return usd/0.92
+def eur_to_usd(eur):
+    return eur*0.92
+def usd_to_ind(usd):
+    return usd*83
+def ind_to_usd(ind):
+    return ind/83
+def eur_to_ind(eur):
+    return eur*101.95
+def ind_to_eur(ind):
+    return ind/0.0098
 
-#roman to integer
+print("1) USD -> EURO\n2) EURO -> USD\n3) USD -> IND\n4) IND -> USD\n5) EURO -> IND\n6) IND -> EURO")
+choice=input("Choose 1-6:")
+val=int(input("Enter the value :"))
+conversions={
+    "1":usd_to_eur,
+    "2":eur_to_usd,
+    "3":usd_to_ind,
+    "4":ind_to_usd,
+    "5":eur_to_ind,
+    "6":ind_to_eur
+}
 
-def romanToInteger(s):
-    
-    roman_mapping={
-            "I":1,
-            "V":5,
-            "X":10,
-            "L":50,
-            "C":100,
-            "D":500,
-            "M":1000
-        }
-        
-    result=0
+if choice in conversions:
+    print("Result:",conversions[choice](val))
+else:
+    print("Invalid choice")
 
-    for i in range(len(s)):
+#Word Counter
 
-        if i<len(s)-1 and roman_mapping[s[i]]<roman_mapping[s[i+1]]:
-            result-=roman_mapping[s[i]]
-
-        else:
-            result+=roman_mapping[s[i]]
-
-    return result
-print(romanToInteger("IV"))
-print(romanToInteger("LVIII"))
-print(romanToInteger("MCMXCIV"))
-
-# Find First and Last Position of Element in Sorted Array
-
-def find_first_last(nums,target):
-
-    first,last=-1,-1
-
-    for i in range(len(nums)):
-        if nums[i]==target:
-            if first==-1:
-                first=i
-            last=i
-
-    return [first,last]
-
-nums = [2, 4, 4, 4, 6, 7, 9]
-target = 4
-print(find_first_last(nums, target))

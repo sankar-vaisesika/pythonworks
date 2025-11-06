@@ -58,4 +58,4 @@ b = [[5, 6],
 
 print("a + b =", matrix_addition(a, b))
 print("Transpose of a =", transpose_matrix(a))
-print("Multiple of a*b=",matrix_multiply(a,b))
+print("Multiple of a*b =",matrix_multiply(a,b))
