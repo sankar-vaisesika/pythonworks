@@ -10,6 +10,22 @@
 #looping 
 #list
 #django project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Input marks for different subjects and calculate the total, average, and grade (A/B/C/D/F).
 
 # maths=int(input("Enter marks for maths:"))
@@ -141,4 +157,19 @@ else:
     print("Invalid choice")
 
 #Word Counter
+import re
+def word_counter(text):
+    chars=len(text)
+    words=re.findall(r"\w+",text)
+    sentence=re.findall(r"[.?!]+",text)
+    paragraph=[p for p in text.split("\n    ")]
 
+    return {
+        "characters":chars,
+        "words":len(words),
+        "sentences":len(sentence),
+        "paragraphs":len(paragraph)
+    }
+
+print(word_counter("hai hello how . All is right?"))
+#Alarm Clock / Timer
