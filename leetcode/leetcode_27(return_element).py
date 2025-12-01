@@ -16,3 +16,4 @@ def remove_element(nums,val):
     return k
 
 print(remove_element([3,2,2,3],3))
+print(remove_element([0,1,2,2,3,0,4,2],2))

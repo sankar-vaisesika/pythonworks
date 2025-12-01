@@ -1,23 +1,20 @@
 # The digital root of a non-negative integer is the single-digit 
 # value obtained by an iterative process of summing digits. 
 # This process continues until a single-digit number is reached. 
-
+#    16  -->  1 + 6 = 7
+#    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+# 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+# 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
 def digitalRoot(n):
 
     while n>=10:
-
         result=0
-
         while n>0:
-
             result+=n%10
-
             n=n//10
-
         n=result
-
     return n
 
-
 print(digitalRoot(333))
+print(digitalRoot(942))

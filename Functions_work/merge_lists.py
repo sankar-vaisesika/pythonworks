@@ -28,5 +28,3 @@ print(mergeTwoLists([1,2,4],[1,3,4]))
 print(mergeTwoLists([],[]))
 print(mergeTwoLists([],[0]))
 
-
-
