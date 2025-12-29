@@ -4,7 +4,6 @@ X=[[1,3],
     [3,4]]
 
 Y=0
-
 for i in range(len(X)):
     for j in range(len(X)):
         if i==j:    #to get sum of other diagonel put if i!=j

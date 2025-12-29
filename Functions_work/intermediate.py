@@ -129,8 +129,55 @@ print(largest_in_lst([3,1,5,7,4]))
 
 # Create a function that accepts variable number of arguments using *args
 
+def process_items(*args):
+    if not args:
+        print("No items were provided")
+        
+    for item in args:
+        print(item)
+    
+process_items("apple","banana","orange")
 # Create a function that accepts keyword arguments using **kwargs
+def process_profiles(**kwargs):
+    if not kwargs:
+        print("No details provided")
+        return
+    
+    for k,v in kwargs.items():
+        print(f"{k.capitalize()}:{v}")
 
+
+process_profiles(name="Tony",age=34,city="New Town")
 # Return unique elements from a list
 
+def unique_elements(lst):
+    unique_list=[]
+    for item in lst:
+        if item not in unique_list:
+            unique_list.append(item)
+    return unique_list
+
+    # unique_lst=set(lst)
+    # return list(unique_lst)
+print(unique_elements([1,2,1,4,5,3,2]))
 # Use recursion to calculate factorial or Fibonacci
+
+def recursive_fact(num):
+    if num==1 or num==0:
+        return 1
+    
+    else:
+        return num*recursive_fact(num-1)
+    
+print(recursive_fact(5))
+
+def recursive_fibonacci(num):
+    if num==0:
+        return 0
+    elif num==1:
+        return 1
+    
+    else:
+        return recursive_fibonacci(num-1)+recursive_fibonacci(num-2)
+    
+print(recursive_fibonacci(10))

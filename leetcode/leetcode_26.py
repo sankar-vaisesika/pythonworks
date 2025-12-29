@@ -1,4 +1,5 @@
-# Remove Duplicates from Sorted Array
+# Remove Duplicates from Sorted Array: returns the count of the unique elements
+
 
 def removeDuplicates(nums):
 
