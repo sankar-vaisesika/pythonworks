@@ -1,4 +1,3 @@
----
 
 # 🔄 Three Types of User Models in Django
 
@@ -8,7 +7,7 @@
 | `AbstractUser`     | `AbstractBaseUser` + PermissionsMixin | ✅ Yes (add fields) | ✅ All built-in fields            | When you just need to add **extra fields**                          |
 | `AbstractBaseUser` | Lowest-level                          | ✅ Fully Custom     | ❌ Only `password` + `last_login` | When you want **complete control** (email login, no username, etc.) |
 
----
+
 
 ## ✅ 1. `User` (Default Django User Model)
 
