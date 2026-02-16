@@ -26,13 +26,11 @@
 
 #         r-=1
 
-# another method
+# # another method
 
 arr=[2,3,4,5]
 
 sum=7
-
-count=0
 
 for i in range(0,len(arr)-1):
 
@@ -40,12 +38,9 @@ for i in range(0,len(arr)-1):
 
         cur_sum=arr[i]+arr[j]
 
-        count+=1
-
         if cur_sum==sum:
 
             print(arr[i],arr[j])
 
             break
 
-print(count)

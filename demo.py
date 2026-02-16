@@ -12,32 +12,11 @@
 
 
 
-#pagination
+employee={
+          101:{"name":"gokul","salary":"30000"},
+          102:{"name":"sachin","salary":"35000"},
+          103:{"name":"mani","salary":"40000"},
+          }
 
+print(employee[101]["salary"])
 
-# 1. Longest Mountain Subarray
-# A mountain increases strictly then decreases strictly.
-# Return the length of the longest mountain.
-# Example:
-# [2,1,4,7,3,2,5] → 5 ([1,4,7,3,2])
- 
-
-def longest_mountain_subarray(nums):
-    n=len(nums)
-    longest=0
-    i=1
-    while i<n-1:
-        if nums[i-1]<nums[i]>nums[i+1]:
-            left=i-1
-            right=i+1
-            while left>0 and nums[left-1]<nums[left]:
-                left-=1
-            while right<n-1 and nums[right]>nums[right+1]:
-                right+=1
-            longest=max(longest,right-left+1)
-
-        else:
-            i+=1
-    return longest
-
-print(longest_mountain_subarray([2,1,4,7,3,2,5]))
