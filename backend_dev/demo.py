@@ -19,23 +19,7 @@ class child(parent):
 p1=child()
 
 
-class A():
-    def __init__(self):
-        super().__init__()
-        return "hai"
 
-class B(A):
-    def __init__(self):
-        super().__init__()
-        return "hello"
-    
-class C(B):
-    def __init__(self):
-        super().__init__()
-        return "Bye"
-    
-p1=C()
-print(p1)
 
 
 #MRO -Method Resolution Order
